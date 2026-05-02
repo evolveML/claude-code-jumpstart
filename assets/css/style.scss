@@ -3,9 +3,10 @@
 
 @import "{{ site.theme }}";
 
-/* Hide the auto-injected project-name link H1 that jekyll-theme-primer
-   adds at the top of every page — it duplicates the actual page heading
-   from each markdown file. */
-.markdown-body > h1:first-of-type {
+/* Hide the auto-injected project-name H1 that jekyll-theme-primer adds
+   at the top of subpages. It's always wrapped in an anchor link to the
+   site root — content headings in our markdown files never wrap anchors,
+   so this selector targets only the theme injection. */
+.markdown-body > h1:has(> a) {
   display: none;
 }
