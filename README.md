@@ -26,6 +26,8 @@ This is a hands-on starter kit for people who have never used Claude Code (or an
 
 ➡️ **[PREWORK.md — install everything](PREWORK.md)**
 
+> **Computer needed**: Mac, Windows, or Linux laptop. Chromebooks, iPads, and phones won't work for this workshop — bring a real laptop or pair up with someone who has one.
+
 If you get stuck, no shame — show up early or pair up with someone who's done it.
 
 ---

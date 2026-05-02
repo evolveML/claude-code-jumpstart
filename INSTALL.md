@@ -2,6 +2,9 @@
 
 If [PREWORK.md](PREWORK.md) didn't work for you, or you want OS-specific detail, this is the full reference.
 
+**Supported**: macOS, Windows 10/11, Linux.
+**Not supported for the workshop**: Chromebooks (no Node.js without enabling Linux/Crostini, which is itself a setup project), iPads, phones. If that's all you have, pair up with someone who has a Mac or Windows laptop.
+
 ---
 
 ## macOS

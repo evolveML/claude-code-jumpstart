@@ -6,6 +6,20 @@ If everyone shows up with this done, we spend the workshop *building*, not *inst
 
 ---
 
+## Will my computer work?
+
+| Computer | Will it work? |
+|---|---|
+| **Mac** (Intel or Apple Silicon, macOS 11+) | ✅ Yes — full instructions below |
+| **Windows 10 or 11** | ✅ Yes — full instructions below |
+| **Linux** (Ubuntu, Fedora, etc.) | ✅ Yes — see [INSTALL.md](INSTALL.md) for distro-specific notes |
+| **Chromebook** | ⚠️ **Likely no for this workshop.** Standard Chromebooks don't run Node.js or Claude Code. (Newer ones with Linux/Crostini enabled *can* technically work, but setting that up for the first time is more than the workshop's 15-min budget.) **Bring a Mac or Windows laptop instead, or pair up with someone who has one.** |
+| **iPad / tablet / phone** | ❌ No — Claude Code is a desktop tool. Tablets and phones can't run it. |
+
+If you only have a Chromebook, please reach out to the workshop organizer or pair up with someone — we don't want you sitting on the sidelines.
+
+---
+
 ## What you need to install
 
 | Tool | Why | Time |
@@ -52,7 +66,7 @@ In your terminal, run:
 npm install -g @anthropic-ai/claude-code
 ```
 
-(On Mac/Linux, you may need `sudo npm install -g @anthropic-ai/claude-code` — enter your password if prompted.)
+(On **Mac/Linux**, you may need `sudo npm install -g @anthropic-ai/claude-code` — enter your password if prompted. On **Windows**, if you get a permissions error, close the terminal and re-open it as Administrator: right-click → "Run as administrator".)
 
 To verify:
 
