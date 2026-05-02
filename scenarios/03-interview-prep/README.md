@@ -1,5 +1,6 @@
 ---
 title: "Scenario 3: Interview Prep Coach"
+permalink: /scenarios/03-interview-prep/
 ---
 
 # Scenario 3: Interview Prep Coach

@@ -1,5 +1,6 @@
 ---
 title: "Scenario 1: Learning Companion"
+permalink: /scenarios/01-learning-companion/
 ---
 
 # Scenario 1: Learning Companion

@@ -1,5 +1,6 @@
 ---
 title: "Scenario 2: Data → Dashboard"
+permalink: /scenarios/02-data-to-dashboard/
 ---
 
 # Scenario 2: Data → Dashboard
