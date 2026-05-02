@@ -43,6 +43,10 @@ VSCode is a free code editor from Microsoft. Don't worry — you don't need to "
 
 ➡️ **[Download VSCode](https://code.visualstudio.com/download)**
 
+The page has three big buttons — one for each operating system. **Click the one that matches your computer:**
+
+![VSCode download page — three big platform buttons: Windows, Linux (penguin), Mac (Apple)]({{ "/assets/screenshots/06-vscode-download.png" | relative_url }})
+
 Install it like any normal app. Open it once when done.
 
 ---
@@ -52,6 +56,10 @@ Install it like any normal app. Open it once when done.
 Node.js is a runtime that Claude Code needs. You won't interact with it directly.
 
 ➡️ **[Download the LTS version of Node.js](https://nodejs.org/en/download)**
+
+On the page, **pick your operating system** (macOS / Windows / Linux), then **click "Download Node.js (LTS)"** — the green button. Don't worry about the install commands shown on the page; you can ignore those.
+
+![Node.js download page — pick your OS at the top, then click the green Download button]({{ "/assets/screenshots/07-nodejs-download.png" | relative_url }})
 
 Install with all defaults. To verify it worked, open your **Terminal** (Mac: `Cmd+Space` → "Terminal"; Windows: Start menu → "Command Prompt") and type:
 

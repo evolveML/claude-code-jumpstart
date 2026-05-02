@@ -41,7 +41,9 @@ You should now see a chat box labeled Claude. **You're ready.**
 Pick a YouTube video (5–15 minutes) about something you want to learn. Then:
 
 1. Go to **[notegpt.io/youtube-transcript-generator](https://notegpt.io/youtube-transcript-generator)**
-2. Paste the YouTube URL → click **Generate** → click **Copy Transcript**
+2. Paste the YouTube URL into the box → click the blue **Generate Transcript** button → click **Copy Transcript** when it appears.
+
+![notegpt.io transcript generator — paste the YouTube URL in the box, click the blue Generate Transcript button]({{ "/assets/screenshots/08-notegpt-transcript.png" | relative_url }})
 
 > 💡 **Don't have a video picked yet?** Use our [sample transcript](sample-transcript.txt) about starting a Shopify side hustle. Right-click → Save As, or copy the text from there.
 
