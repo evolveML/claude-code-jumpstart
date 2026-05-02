@@ -13,21 +13,22 @@ By the end you'll have a `LEARNING_PLAN.md` with phases and TODOs, and Claude te
 > 🛠 **You need**: Claude Code installed (see [Prework]({{ "/prework/" | relative_url }}))
 > 📂 **No git clone required** — everything you need is on this page
 
+> 👉 **How to copy a prompt**: Throughout this page you'll see prompts inside gray boxes. **Hover your mouse over any gray box and a "copy" icon appears in the top-right corner — click it to copy the whole prompt in one click.** (If the icon doesn't appear, just select the text manually with your mouse and copy it the normal way.)
+
 ---
 
 ## How to do it
 
-### Step 1 — Make a folder for this and open Claude Code
+### Step 1 — Open a folder in VSCode and start Claude
 
-Anywhere on your computer (Desktop is fine):
+In VSCode:
+1. **File → New Folder** (or `Cmd/Ctrl + Shift + N`). Name it `my-learning` and save it on your Desktop.
+2. **File → Open** → pick the folder you just made.
+3. **Click the Claude icon in the left sidebar** to open the chat panel. (No icon? Open Extensions and confirm "Claude Code" is installed.)
 
-```bash
-mkdir my-learning
-cd my-learning
-claude
-```
+You should now see a chat box labeled Claude. **You're ready.**
 
-Or in VSCode: File → Open Folder → make a new folder → open it → start `claude` in the integrated terminal.
+> 💡 **Prefer the terminal?** `mkdir my-learning && cd my-learning && claude` does the same thing.
 
 ### Step 2 — Get a YouTube transcript
 

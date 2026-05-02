@@ -2,7 +2,9 @@
 
 **Get comfortable with AI by building three useful things, fast.**
 
-This is a hands-on starter kit for people who have never used Claude Code (or any AI coding assistant) before. By the end, you will have built three small "agents" that help you in real life — and you will know how to build more.
+> 🎨 **Don't worry — you won't write any code.** The name says "Code," but you talk to Claude exactly the way you'd talk to a smart intern, in plain English. The "code" part just means Claude can read and edit files on your computer (like writing notes, organizing data, building a learning plan for you). You stay in plain English the whole time. If you can write a text message, you can use this.
+
+This is a hands-on starter kit for people who have never used an AI tool like this before — designers, writers, marketers, founders, students, anyone. By the end, you will have built three small "agents" that help you in real life — and you will know how to build more, just by talking to Claude.
 
 > Originally built for the **City of Knowledge AI Symposium — May 2nd**. Free for anyone to use, fork, or run as their own workshop.
 
@@ -51,16 +53,20 @@ In the workshop we'll do **just one** scenario together. Don't try to do all thr
 
 ---
 
-## Quick start
+## Quick start (no terminal needed)
 
-Once you've done the [prework](PREWORK.md) (VSCode + Claude Code installed):
+Once you've done the [prework]({{ "/prework/" | relative_url }}) (VSCode + Claude Code installed):
 
-1. **Make a folder** anywhere on your computer — Desktop is fine: `mkdir my-claude-test && cd my-claude-test`
-2. **Start Claude Code**: type `claude` in the terminal (or open the folder in VSCode and start Claude in the integrated terminal)
-3. **Click any scenario above** ⬆ — each page has a copy-pasteable prompt and step-by-step instructions
-4. **Paste the prompt** into Claude Code. That's it.
+1. **Open VSCode** (the app you installed in prework).
+2. **File → New Folder** — name it anything (e.g., `my-claude-test`). Save it on your Desktop.
+3. **Open that folder in VSCode**: File → Open → pick the folder you just made.
+4. **Click the Claude icon in the left sidebar.** It looks like the Claude logo. (If you don't see it, click the Extensions icon — four squares — and make sure "Claude Code" is installed.)
+5. **A chat panel opens on the right.** If it asks you to sign in, do that. **You're now talking to Claude.**
+6. **Click any scenario above ⬆**, copy the prompt from that page, paste it into the Claude chat. That's it.
 
-> 💡 **Want a local copy of all the files?** `git clone https://github.com/evolveML/claude-code-jumpstart.git` works too — but you don't need it. Everything is on these pages.
+That's the whole flow. No terminal commands. No git. No code.
+
+> 💡 **Comfortable with the terminal?** You can also open any folder in your terminal and type `claude` to start a session. Both paths work — pick the one that feels easier.
 
 ---
 

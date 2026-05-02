@@ -5,7 +5,11 @@ permalink: /troubleshooting/
 
 # Troubleshooting
 
-The seven problems that hit 80% of first-time users, with fixes.
+**If something broke — this isn't your fault, and you're not the only one.** Computers are weird the first time you set new things up. Almost everyone hits at least one snag.
+
+Here are the seven things that go wrong most often, with exactly how to fix each one. None of these mean Claude Code is broken or that you did something wrong. They're all small setup hiccups, and each has a clear fix.
+
+If you're stuck, take a breath. Try the matching fix below. If it still doesn't work, ask the person running the workshop or open an issue on this repo.
 
 ---
 

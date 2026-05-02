@@ -11,17 +11,19 @@ permalink: /scenarios/02-data-to-dashboard/
 > 🛠 **You need**: Claude Code installed (see [Prework]({{ "/prework/" | relative_url }}))
 > 📂 **No git clone required** — everything is on this page
 
+> 👉 **How to copy a prompt**: Throughout this page you'll see prompts inside gray boxes. **Hover your mouse over any gray box and a "copy" icon appears in the top-right corner — click it to copy the whole prompt in one click.** (If the icon doesn't appear, just select the text manually with your mouse and copy it the normal way.)
+
 ---
 
 ## How to do it
 
-### Step 1 — Make a folder and open Claude Code
+### Step 1 — Open a folder in VSCode and start Claude
 
-```bash
-mkdir my-data-analysis
-cd my-data-analysis
-claude
-```
+1. **VSCode → File → New Folder**. Name it `my-data-analysis`. Save it on your Desktop.
+2. **File → Open** → pick the folder.
+3. **Click the Claude icon in the left sidebar** to open the chat.
+
+> 💡 **Prefer the terminal?** `mkdir my-data-analysis && cd my-data-analysis && claude` does the same.
 
 ### Step 2 — Get some data into the folder
 

@@ -11,17 +11,19 @@ permalink: /scenarios/03-interview-prep/
 > 🛠 **You need**: Claude Code installed (see [Prework]({{ "/prework/" | relative_url }}))
 > 📂 **No git clone required** — everything is on this page
 
+> 👉 **How to copy a prompt**: Throughout this page you'll see prompts inside gray boxes. **Hover your mouse over any gray box and a "copy" icon appears in the top-right corner — click it to copy the whole prompt in one click.** (If the icon doesn't appear, just select the text manually with your mouse and copy it the normal way.)
+
 ---
 
 ## How to do it
 
-### Step 1 — Make a folder for this interview
+### Step 1 — Make an interview folder in VSCode and start Claude
 
-```bash
-mkdir my-interview-at-acme   # use the actual company name
-cd my-interview-at-acme
-claude
-```
+1. **VSCode → File → New Folder**. Name it after the company you're interviewing with (e.g., `my-interview-at-acme`). Save it on your Desktop.
+2. **File → Open** → pick the folder.
+3. **Click the Claude icon in the left sidebar** to open the chat.
+
+> 💡 **Prefer the terminal?** `mkdir my-interview-at-acme && cd my-interview-at-acme && claude` does the same.
 
 ### Step 2 — Drop your files into the folder
 
