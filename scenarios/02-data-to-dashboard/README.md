@@ -13,6 +13,8 @@ permalink: /scenarios/02-data-to-dashboard/
 
 > 👉 **How to copy a prompt**: Throughout this page you'll see prompts inside gray boxes. **Hover your mouse over any gray box and a "Copy" button appears in the top-right corner — click it to copy the whole prompt in one click.** You'll see "Copied!" flash for a second to confirm. Then paste into Claude Code.
 
+![The Copy button on a code block — hover any gray box and it appears in the top-right]({{ "/assets/screenshots/03-copy-button.png" | relative_url }})
+
 ---
 
 ## How to do it
@@ -21,7 +23,7 @@ permalink: /scenarios/02-data-to-dashboard/
 
 1. **VSCode → File → New Folder**. Name it `my-data-analysis`. Save it on your Desktop.
 2. **File → Open** → pick the folder.
-3. **Click the Claude icon in the left sidebar** to open the chat.
+3. **Click the Claude icon in the left sidebar** to open the chat. ([What it looks like]({{ "/assets/screenshots/01-vscode-claude-icon.png" | relative_url }}))
 
 > 💡 **Prefer the terminal?** `mkdir my-data-analysis && cd my-data-analysis && claude` does the same.
 

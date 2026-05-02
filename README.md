@@ -60,8 +60,13 @@ Once you've done the [prework]({{ "/prework/" | relative_url }}) (VSCode + Claud
 1. **Open VSCode** (the app you installed in prework).
 2. **File → New Folder** — name it anything (e.g., `my-claude-test`). Save it on your Desktop.
 3. **Open that folder in VSCode**: File → Open → pick the folder you just made.
-4. **Click the Claude icon in the left sidebar.** It looks like the Claude logo. (If you don't see it, click the Extensions icon — four squares — and make sure "Claude Code" is installed.)
-5. **A chat panel opens on the right.** If it asks you to sign in, do that. **You're now talking to Claude.**
+4. **Click the Claude icon in the left sidebar.** It looks like the Claude logo (a small starburst). (If you don't see it, click the Extensions icon — four squares — and make sure "Claude Code" is installed.)
+
+   ![The Claude icon in VSCode's left sidebar — the small starburst, circled in red]({{ "/assets/screenshots/01-vscode-claude-icon.png" | relative_url }})
+
+5. **A chat panel opens.** If it asks you to sign in, do that. **You're now talking to Claude.**
+
+   ![Claude Code chat panel open in VSCode, with the input box at the bottom]({{ "/assets/screenshots/02-claude-chat-panel.png" | relative_url }})
 6. **Click any scenario above ⬆**, copy the prompt from that page, paste it into the Claude chat. That's it.
 
 That's the whole flow. No terminal commands. No git. No code.

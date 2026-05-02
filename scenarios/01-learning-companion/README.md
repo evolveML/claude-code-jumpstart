@@ -15,6 +15,8 @@ By the end you'll have a `LEARNING_PLAN.md` with phases and TODOs, and Claude te
 
 > 👉 **How to copy a prompt**: Throughout this page you'll see prompts inside gray boxes. **Hover your mouse over any gray box and a "Copy" button appears in the top-right corner — click it to copy the whole prompt in one click.** You'll see "Copied!" flash for a second to confirm. Then paste into Claude Code.
 
+![The Copy button on a code block — hover any gray box and it appears in the top-right]({{ "/assets/screenshots/03-copy-button.png" | relative_url }})
+
 ---
 
 ## How to do it
@@ -26,7 +28,11 @@ In VSCode:
 2. **File → Open** → pick the folder you just made.
 3. **Click the Claude icon in the left sidebar** to open the chat panel. (No icon? Open Extensions and confirm "Claude Code" is installed.)
 
+   ![The Claude icon in VSCode's left sidebar — circled in red]({{ "/assets/screenshots/01-vscode-claude-icon.png" | relative_url }})
+
 You should now see a chat box labeled Claude. **You're ready.**
+
+![Claude Code chat panel open with the input box at the bottom]({{ "/assets/screenshots/02-claude-chat-panel.png" | relative_url }})
 
 > 💡 **Prefer the terminal?** `mkdir my-learning && cd my-learning && claude` does the same thing.
 
@@ -95,7 +101,11 @@ Claude will:
 - Set up its TODO list
 - Show you the plan and ask if you're ready
 
-Open `LEARNING_PLAN.md` in VSCode to see what it built.
+Open `LEARNING_PLAN.md` in VSCode to see what it built. **It should look something like this:**
+
+![LEARNING_PLAN.md after Claude writes it — phases, goals, and TODOs in the file tree on the left, the rendered plan in the middle, and the Claude conversation on the right]({{ "/assets/screenshots/04-learning-plan-in-explorer.png" | relative_url }})
+
+That file is real. It's on your computer. You can read it, edit it, share it with friends. Claude wrote it for you in about 30 seconds.
 
 ### Step 6 — Tell Claude: "start phase 1"
 
@@ -151,6 +161,12 @@ Claude will:
 2. Distill the pattern into an agent system prompt
 3. Write the file to `~/.claude/agents/learning-companion.md`
 4. Show you what it wrote
+
+**Here's what that looks like** — the agent file Claude wrote, with Claude's explanation of what it built on the right side:
+
+![The agent file Claude wrote — beautifully formatted English instructions in the editor, with Claude's narration of the structure on the right]({{ "/assets/screenshots/05-agent-file-in-vscode.png" | relative_url }})
+
+That's an AI assistant. You built it by talking. **It's just text.** You can read it, edit it, share it with a friend by emailing them the file.
 
 **Restart Claude Code** (type `/exit`, then `claude`). Then in any folder, anywhere on your computer:
 
