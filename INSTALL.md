@@ -8,7 +8,9 @@ permalink: /install/
 If the [Prework]({{ "/prework/" | relative_url }}) didn't work for you, or you want OS-specific detail, this is the full reference.
 
 **Supported**: macOS, Windows 10/11, Linux.
-**Not supported for the workshop**: Chromebooks (no Node.js without enabling Linux/Crostini, which is itself a setup project), iPads, phones. If that's all you have, pair up with someone who has a Mac or Windows laptop.
+**Not supported for the workshop**: Chromebooks, iPads, phones. If that's all you have, pair up with someone who has a Mac or Windows laptop.
+
+> 📚 **Authoritative source**: [code.claude.com/docs/en/quickstart](https://code.claude.com/docs/en/quickstart#native-install-recommended) is Anthropic's official install guide. If anything below has gone stale, that page is the source of truth.
 
 ---
 
@@ -16,47 +18,38 @@ If the [Prework]({{ "/prework/" | relative_url }}) didn't work for you, or you w
 
 ### 1. VSCode
 
-Easiest:
 - Download from [code.visualstudio.com/download](https://code.visualstudio.com/download)
 - Open the `.zip`, drag the VSCode app into your Applications folder, launch it.
 
 When prompted, run **"Shell Command: Install 'code' command in PATH"** from the Command Palette (`Cmd+Shift+P`) so you can open folders in VSCode by typing `code .`.
 
-### 2. Node.js
+### 2. Claude Code (native installer — recommended)
 
-Two options:
-
-**Option A — Direct install (easiest):**
-- Download the LTS `.pkg` from [nodejs.org/en/download](https://nodejs.org/en/download)
-- Double-click and install with defaults.
-
-**Option B — Homebrew (if you already have it):**
-```bash
-brew install node@20
-```
-
-Verify: `node --version` → should show `v20.x.x` or higher.
-
-### 3. Claude Code
+Open Terminal and paste:
 
 ```bash
-npm install -g @anthropic-ai/claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-If you get a permissions error, try:
+That's it — no Node.js, no npm, no Homebrew. The installer puts a `claude` binary on your PATH and bundles its own runtime.
+
+**Close the terminal completely** and open a fresh one (so the new `claude` command is found). Verify:
+
 ```bash
-sudo npm install -g @anthropic-ai/claude-code
+claude --version
 ```
 
-Verify: `claude --version`.
+You should see a version number.
 
-### 4. Sign in
+### 3. Sign in
 
 ```bash
 claude
 ```
 
-It will open your browser. Sign in to your Anthropic account. Done.
+It opens your browser. Sign in to your Anthropic account. Done.
+
+> 💡 **Want npm install instead?** It still works (`npm install -g @anthropic-ai/claude-code`) but requires you to install Node.js first. The native installer is simpler — start there unless you have a specific reason not to.
 
 ---
 
@@ -67,26 +60,29 @@ It will open your browser. Sign in to your Anthropic account. Done.
 - Download the `.exe` installer from [code.visualstudio.com/download](https://code.visualstudio.com/download)
 - During install, **check the box** that says "Add to PATH" — this lets you type `code .` in any terminal.
 
-### 2. Node.js
+### 2. Open the right terminal
 
-- Download the LTS Windows Installer (`.msi`) from [nodejs.org/en/download](https://nodejs.org/en/download)
-- Install with defaults.
+Windows is tricky — Claude Code works best in **PowerShell** or **Windows Terminal**, not the old `cmd.exe`.
 
-### 3. Open the right terminal
+- Press `Win+X` → choose **"Windows Terminal"** or **"Windows PowerShell"**.
 
-Windows is tricky — Claude Code works best in **Windows Terminal** or **PowerShell**, not the old `cmd.exe`.
+### 3. Claude Code (native installer — recommended)
 
-- Press `Win+X` → choose **"Windows Terminal"** or **"PowerShell"**.
+In PowerShell, paste:
 
-### 4. Claude Code
-
-```bash
-npm install -g @anthropic-ai/claude-code
+```powershell
+irm https://claude.ai/install.ps1 | iex
 ```
 
-Verify: `claude --version`.
+(If you must use `cmd.exe` instead: `curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd`)
 
-### 5. Sign in
+**Close PowerShell completely** and open a fresh one. Verify:
+
+```bash
+claude --version
+```
+
+### 4. Sign in
 
 ```bash
 claude
@@ -94,7 +90,7 @@ claude
 
 Browser will open for sign-in.
 
-> **Windows tip**: If `npm install -g` fails with a permissions error, run your terminal **as Administrator** (right-click → "Run as administrator") and try again.
+> 💡 **Want npm install instead?** Install Node.js LTS from [nodejs.org/en/download](https://nodejs.org/en/download) first, then run `npm install -g @anthropic-ai/claude-code` in PowerShell as Administrator. The native installer is simpler — try that first.
 
 ---
 
@@ -106,39 +102,25 @@ Browser will open for sign-in.
 - Fedora/RHEL: Download the `.rpm`, then `sudo rpm -i code_*.rpm`
 - Arch: `yay -S visual-studio-code-bin`
 
-### 2. Node.js
+### 2. Claude Code (native installer — recommended)
 
 ```bash
-# Ubuntu/Debian
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# Or use nvm (node version manager) if you prefer:
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-nvm install 20
-nvm use 20
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-### 3. Claude Code
+**Close the terminal** and open a fresh one. Verify:
 
 ```bash
-npm install -g @anthropic-ai/claude-code
+claude --version
 ```
 
-If permissions fail, either use `sudo` or set up an `npm` global directory:
-```bash
-mkdir -p ~/.npm-global
-npm config set prefix '~/.npm-global'
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
-source ~/.bashrc
-npm install -g @anthropic-ai/claude-code
-```
-
-### 4. Sign in
+### 3. Sign in
 
 ```bash
 claude
 ```
+
+> 💡 **Want npm install instead?** Install Node.js (`curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt-get install -y nodejs` on Debian/Ubuntu, or use nvm), then `npm install -g @anthropic-ai/claude-code`. The native installer doesn't need any of that.
 
 ---
 
@@ -160,14 +142,11 @@ Now you can open any folder in VSCode, click the Claude icon in the sidebar, and
 In a fresh terminal:
 
 ```bash
-node --version    # v20.x or higher
-npm --version     # 10.x or higher
-claude --version  # any version
-git --version     # any version
-code --version    # any version (Mac/Linux only — Windows uses the GUI)
+claude --version  # any version (this is the only one strictly required)
+code --version    # any version (Mac/Linux — Windows uses the GUI)
 ```
 
-All five commands should return version numbers, not errors.
+Both should return version numbers.
 
 ---
 

@@ -30,10 +30,10 @@ If you only have a Chromebook, please reach out to the workshop organizer or pai
 | Tool | Why | Time |
 |---|---|---|
 | **VSCode** | Your editor — where you write and see files | 3 min |
-| **Node.js** (v18 or newer) | Required to run Claude Code | 3 min |
-| **Claude Code** | The AI tool we're learning | 2 min |
+| **Claude Code** | The AI tool we're learning — one-line installer, no other dependencies | 2 min |
 | **An Anthropic account** | So Claude knows it's you | 5 min |
-| **Git** (probably already installed) | To download the workshop kit | 1 min |
+
+That's it — three things. (You don't need Node.js, npm, or git to use the kit. The Claude Code native installer bundles everything it needs.)
 
 ---
 
@@ -51,47 +51,37 @@ Install it like any normal app. Open it once when done.
 
 ---
 
-## Step 2: Install Node.js (3 min)
+## Step 2: Install Claude Code (2 min — native installer)
 
-Node.js is a runtime that Claude Code needs. You won't interact with it directly.
+Claude Code has a one-line native installer. It does not need Node.js, npm, or any other dependency. Just open your **Terminal** and paste the line for your operating system:
 
-➡️ **[Download the LTS version of Node.js](https://nodejs.org/en/download)**
-
-On the page, **pick your operating system** (macOS / Windows / Linux), then **click "Download Node.js (LTS)"** — the green button. Don't worry about the install commands shown on the page; you can ignore those.
-
-![Node.js download page — pick your OS at the top, then click the green Download button]({{ "/assets/screenshots/07-nodejs-download.png" | relative_url }})
-
-Install with all defaults. To verify it worked, open your **Terminal** (Mac: `Cmd+Space` → "Terminal"; Windows: Start menu → "Command Prompt") and type:
+**On Mac or Linux**, open Terminal (Mac: `Cmd+Space` → "Terminal") and paste:
 
 ```bash
-node --version
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-You should see something like `v20.x.x` or `v22.x.x`. If you see `command not found`, restart your terminal and try again.
+**On Windows**, open PowerShell (Start menu → "Windows PowerShell") and paste:
 
----
-
-## Step 3: Install Claude Code (2 min)
-
-In your terminal, run:
-
-```bash
-npm install -g @anthropic-ai/claude-code
+```powershell
+irm https://claude.ai/install.ps1 | iex
 ```
 
-(On **Mac/Linux**, you may need `sudo npm install -g @anthropic-ai/claude-code` — enter your password if prompted. On **Windows**, if you get a permissions error, close the terminal and re-open it as Administrator: right-click → "Run as administrator".)
-
-To verify:
+The installer takes about 30 seconds. When it's done, **close the terminal completely and open a fresh one** (the new terminal needs to pick up the updated PATH). Then verify:
 
 ```bash
 claude --version
 ```
 
-You should see a version number.
+You should see a version number like `2.1.x` or higher.
+
+> 📚 **Official source**: [Claude Code Quickstart — Native install (recommended)](https://code.claude.com/docs/en/quickstart#native-install-recommended)
+
+> 💡 **Already had Claude Code installed via npm?** No problem — the native installer will take over. You can also continue to use the npm version if you prefer; both work the same.
 
 ---
 
-## Step 4: Create an Anthropic account (5 min)
+## Step 3: Create an Anthropic account (5 min)
 
 Claude Code needs to know it's you so it can talk to Claude.
 
@@ -103,7 +93,7 @@ After signing up, you do **NOT** need to manually grab an API key — Claude Cod
 
 ---
 
-## Step 5: Sign Claude Code into your Anthropic account
+## Step 4: Sign Claude Code into your Anthropic account
 
 In your terminal, navigate to any folder (or just stay in your home directory) and run:
 
@@ -126,7 +116,7 @@ Claude will introduce itself. **You are now ready for the workshop.** Type `/exi
 
 ---
 
-## Step 6: Install the VSCode extension (recommended, 1 min)
+## Step 5: Install the VSCode extension (recommended, 1 min)
 
 In VSCode:
 1. Click the **Extensions** icon on the left sidebar (the four squares).
@@ -137,19 +127,6 @@ This gives you a sidebar UI where you can run Claude visually without typing in 
 
 ---
 
-## Step 7: Make sure Git works (30 seconds)
-
-Most computers already have Git. To check:
-
-```bash
-git --version
-```
-
-If you see a version number, you're good. If not:
-- **Mac**: Run `xcode-select --install` and follow the prompts
-- **Windows**: Download from [git-scm.com](https://git-scm.com/download/win)
-- **Linux**: `sudo apt install git` (or your distro's equivalent)
-
 ---
 
 ## You're done!
@@ -158,7 +135,6 @@ Show up to the workshop with:
 - ✅ VSCode installed
 - ✅ Claude Code working (`claude --version` returns a number)
 - ✅ Signed into Anthropic (you ran `claude` and chatted with it once)
-- ✅ Git working
 
 If **anything** broke, see [Troubleshooting]({{ "/troubleshooting/" | relative_url }}) or just show up 15 minutes early to the workshop.
 

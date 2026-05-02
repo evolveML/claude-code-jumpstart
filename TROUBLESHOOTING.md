@@ -15,44 +15,51 @@ If you're stuck, take a breath. Try the matching fix below. If it still doesn't 
 
 ## 1. `claude: command not found` after I installed it
 
-**Cause**: Your terminal can't find where `npm` put the `claude` binary.
+**Cause #1 (most common)**: You haven't restarted your terminal since the install. The new PATH entry isn't picked up by the old terminal session.
 
-**Fix**:
+**Fix**: Close your terminal completely and open a fresh one. Try `claude --version` again.
 
-Close your terminal completely and open a fresh one. If it still fails:
+**Cause #2**: The native installer's PATH entry isn't being loaded by your shell.
 
-**Mac/Linux**:
+**Fix (Mac/Linux)**:
 ```bash
-# Find where npm puts global packages
-npm config get prefix
-# It will print something like /usr/local or /Users/you/.npm-global
+# Native installer puts claude in ~/.local/bin
+ls -la ~/.local/bin/claude
 
-# Add /bin to that path and put it in your shell config:
-echo 'export PATH="$(npm config get prefix)/bin:$PATH"' >> ~/.zshrc
+# If it's there but not on PATH, add it:
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-**Windows**: Restart your terminal as Administrator. If still failing, reinstall Node.js with the option "Add to PATH" checked.
+**Fix (Windows)**: Restart PowerShell. If still failing, log out and log back in (sometimes Windows needs that for new PATH entries).
+
+**If you used `npm install -g` instead of the native installer**: switch to the native installer — it usually fixes PATH issues. See [the install guide]({{ "/install/" | relative_url }}).
 
 ---
 
 ## 2. `npm install -g` fails with EACCES / permission denied
 
-**Cause**: npm wants to write to a system folder and your user account doesn't have permission.
+**Best fix**: Switch to the native installer instead — it doesn't need npm at all.
 
-**Best fix (Mac/Linux)**: Set up a user-owned npm prefix so you never need sudo:
+```bash
+# Mac/Linux
+curl -fsSL https://claude.ai/install.sh | bash
+
+# Windows PowerShell
+irm https://claude.ai/install.ps1 | iex
+```
+
+The native installer avoids all of npm's permission issues. See [the install guide]({{ "/install/" | relative_url }}).
+
+**If you must use npm** (for some reason): set up a user-owned npm prefix so you never need sudo:
 
 ```bash
 mkdir -p ~/.npm-global
 npm config set prefix '~/.npm-global'
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc   # use ~/.bashrc on Linux
+echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 npm install -g @anthropic-ai/claude-code
 ```
-
-**Quick fix**: `sudo npm install -g @anthropic-ai/claude-code` (works but isn't great long-term)
-
-**Windows**: Run terminal as Administrator.
 
 ---
 
