@@ -16,19 +16,38 @@ That's it. No code, no servers, nothing to deploy.
 
 ---
 
-## How to install an agent
+## How to install an agent (no git clone needed)
 
+Pick the one(s) you want. Each is a single curl command:
+
+**Learning Companion**:
 ```bash
-# Make sure the agents folder exists
-mkdir -p ~/.claude/agents
+mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/learning-companion.md -o ~/.claude/agents/learning-companion.md
+```
 
-# Copy the agent file from this repo
-cp learning-companion.md ~/.claude/agents/
-cp data-analyst.md ~/.claude/agents/
-cp interview-coach.md ~/.claude/agents/
+**Data Analyst**:
+```bash
+mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/data-analyst.md -o ~/.claude/agents/data-analyst.md
+```
+
+**Interview Coach**:
+```bash
+mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/interview-coach.md -o ~/.claude/agents/interview-coach.md
+```
+
+**All three at once**:
+```bash
+mkdir -p ~/.claude/agents && \
+  curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/learning-companion.md -o ~/.claude/agents/learning-companion.md && \
+  curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/data-analyst.md -o ~/.claude/agents/data-analyst.md && \
+  curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/interview-coach.md -o ~/.claude/agents/interview-coach.md
 ```
 
 That's it. Restart Claude Code and the agents are live.
+
+> 💡 **If you cloned the repo**, you can also just `cp agents/*.md ~/.claude/agents/` and skip the curl.
+
+> 💡 **Don't have curl?** (Rare on modern systems.) View the agent file on GitHub, copy the raw text, and save it to `~/.claude/agents/[name].md` manually.
 
 ---
 

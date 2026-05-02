@@ -1,88 +1,144 @@
+---
+title: "Scenario 2: Data → Dashboard"
+---
+
 # Scenario 2: Data → Dashboard
 
-**Drop in any data — a CSV, a spreadsheet, a screenshot of your bills — and Claude finds the story.**
+**Drop in any data — a CSV, a spreadsheet, even a screenshot — and Claude finds the story. Optionally, it builds you a chart.**
 
-This is a take-home scenario. Try it after the workshop.
-
----
-
-## What you'll build
-
-A folder with:
-- Your input data (a CSV, an image, a pasted table)
-- A `ANALYSIS.md` written by Claude with key findings
-- An optional `dashboard.html` Claude generates if you ask for charts
+> ⏱ **Time**: ~10 minutes
+> 🛠 **You need**: Claude Code installed (see [PREWORK](../../PREWORK.md))
+> 📂 **No git clone required** — everything is on this page
 
 ---
 
-## Three ways to use it
+## How to do it
 
-### A. CSV → Analysis (easiest)
-
-You have a CSV — could be a budget, sports stats, sales data, anything.
-
-Try with our sample first:
+### Step 1 — Make a folder and open Claude Code
 
 ```bash
-cd scenarios/02-data-to-dashboard
+mkdir my-data-analysis
+cd my-data-analysis
 claude
 ```
 
-Then paste the prompt from `PROMPT_TEMPLATE.md` referencing `sample-data/family-budget.csv`. Claude will read it and write an analysis.
+### Step 2 — Get some data into the folder
 
-### B. Screenshot → Analysis (most jaw-dropping)
+Three options, pick one:
 
-You have a screenshot — your phone's subscriptions page, a receipt, a chart from a website.
+**A. Use sample data** (zero setup):
+- Family budget CSV: [sample-data/family-budget.csv](sample-data/family-budget.csv) — fictional 12 months of household spending
+- NBA stats CSV: [sample-data/nba-2024-stats.csv](sample-data/nba-2024-stats.csv) — 2023–24 season top 30 players
 
-Drag the image into Claude Code (or use `claude --image path/to/screenshot.png`) and ask: "What's in this image and what should I notice?"
+Right-click → Save As, save to your `my-data-analysis` folder.
 
-Claude reads the image, extracts the data, and writes findings.
+**B. Bring your own CSV**: download from your bank, Apple Health, Yahoo Finance, anywhere. Drop it in the folder.
 
-### C. CSV → Dashboard HTML (most impressive)
+**C. Use a screenshot**: take a screenshot of a chart, receipt, or table. Save it as `screenshot.png` in the folder.
 
-Same as A, but tell Claude: "After the analysis, also write a single-file `dashboard.html` with charts using Chart.js. I want to be able to open it in any browser."
+### Step 3 — Copy this prompt (pick the one that matches your data)
 
-Claude writes a self-contained HTML file with charts you can open with a double-click. No build, no server.
+#### Variation A — CSV/Spreadsheet → Analysis
 
----
+```
+You are my data analyst. I have a data file in this folder. Here's what I want:
 
-## Sample data included
+1. Read the file — figure out the format, columns, and what each column means.
+2. Find the story. Don't just summarize. Look for:
+   - The biggest insight (what would surprise me?)
+   - Trends (what's going up, what's going down?)
+   - Outliers (what's weirdly high or low?)
+   - What's missing (what data would I need to make this more useful?)
+3. Write ANALYSIS.md in this folder with:
+   - Top finding in 1 sentence at the top
+   - 3 key insights (with the actual numbers, not vague claims)
+   - What I should do next based on this data
+   - What I should ask next to dig deeper
+4. Be specific with numbers. If you say "spending on dining is creeping up," show me the months and amounts.
 
-| File | What it is | Try this |
-|---|---|---|
-| `sample-data/family-budget.csv` | A made-up family's monthly spending across 12 months | "Where am I overspending? What's trending up?" |
-| `sample-data/nba-2024-stats.csv` | Top 30 NBA players' 2023–24 season stats | "Who had the most efficient season? Compare LeBron vs Jokic." |
+The file is: [REPLACE WITH YOUR FILENAME, e.g., family-budget.csv]
 
----
+Some context about me/this data: [DESCRIBE — e.g., "this is my family's actual budget" or "I'm a sports fan trying to settle a debate"]
 
-## When to use which
+Don't write code unless I ask. Just analyze.
+```
 
-| You have... | Use approach |
-|---|---|
-| A CSV from your bank, Excel, or a download | A — CSV → Analysis |
-| A screenshot of a chart, receipt, or table | B — Screenshot → Analysis |
-| A CSV and you want to share visualizations | C — CSV → Dashboard HTML |
-| A messy mix of files | Just put them all in one folder, point Claude at the folder, and ask: "What can you tell me from these files?" |
+#### Variation B — Screenshot/Image → Analysis
+
+```
+I'm pasting/attaching an image. Tell me:
+
+1. What is this image? (a chart, a receipt, a screenshot of a webpage, etc.)
+2. What data is in it? Extract the actual values you can see.
+3. What's the story? Same as before — surprises, trends, outliers, what's missing.
+4. Write ANALYSIS.md with the extracted data + your insights.
+
+Don't worry about being perfect on numbers — call out anything you're uncertain about.
+
+Context: [DESCRIBE WHAT THE IMAGE IS, e.g., "this is my Apple subscriptions page"]
+```
+
+To attach the image in Claude Code: drag-and-drop into the VSCode Claude sidebar, OR run `claude --image screenshot.png`.
+
+#### Variation C — CSV → Visual Dashboard (the showstopper)
+
+```
+You are my data analyst AND my front-end developer. I want both an analysis and a visual dashboard.
+
+1. Read the data file: [FILENAME]
+2. Write ANALYSIS.md with the findings (as in Variation A).
+3. Write dashboard.html — a SINGLE HTML FILE that I can open by double-clicking, with:
+   - 3 to 5 charts that visualize the most important findings
+   - Use Chart.js loaded from a CDN — no npm, no build
+   - Embed the data directly in the HTML (don't reference external CSVs)
+   - Clean, modern styling (use a simple dark or light theme — your call)
+   - Include a 1-paragraph intro at the top explaining what someone is looking at
+
+Show me the file paths when done so I can open them.
+
+Context: [DESCRIBE]
+```
+
+When Claude is done, double-click `dashboard.html` — it opens in your browser as a real interactive dashboard.
+
+### Step 4 — Paste, run, read
+
+Paste the prompt into Claude Code. Replace the placeholders. Hit Enter. Open the resulting `ANALYSIS.md` (and `dashboard.html` if you used Variation C).
 
 ---
 
 ## Real-world examples
 
-- **Personal finance**: "Here's my last 12 months of credit card statements as CSVs. Categorize my spending and find the 3 categories where I've been creeping up."
-- **Sports**: "Compare these two players' seasons stats. Who was more valuable to their team and why?"
-- **Small business**: "Here are my last 6 months of Shopify orders. Which products have the best margins? Which customers come back?"
-- **Health**: "Here's a year of Apple Health step data. What's my pattern? When am I most active?"
-- **Job search**: "Here's a CSV of every job I've applied to. What's working? Where am I getting ghosted?"
+| What you have | Try this prompt |
+|---|---|
+| Last 12 months of credit card statements (CSVs) | "Categorize my spending and find the 3 categories where I've been creeping up." |
+| Apple Health step data | "What's my activity pattern? When am I most active? When do I fall off?" |
+| A receipt photo | "What did I buy and what's the most expensive item per dollar of weight?" |
+| Your last 6 months of Shopify orders | "Which products have the best margins? Which customers come back?" |
+| Sports stats for two players | "Compare these two players. Who was more valuable to their team and why?" |
+| A CSV of every job you applied to | "What's working? Where am I getting ghosted? Patterns by role/company size?" |
 
 ---
 
-## Convert it to an agent
-
-Once you've used this twice, install it as a reusable agent:
+## When you're done — install as an agent
 
 ```bash
-mkdir -p ~/.claude/agents
-cp ../../agents/data-analyst.md ~/.claude/agents/
+mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/data-analyst.md -o ~/.claude/agents/data-analyst.md
 ```
 
-Now in any folder with data, you can say `@data-analyst what's the story here?` and Claude knows the drill.
+Restart Claude. Now in any folder with data:
+
+```
+@data-analyst what's the story in this folder?
+```
+
+---
+
+## Tip: the screenshot trick
+
+The most under-used capability of Claude Code is **image input**. Try:
+- Screenshot your phone's Subscriptions screen → "what am I spending and where can I cut?"
+- Screenshot a chart from a news article → "is this chart misleading? what's the actual story?"
+- Screenshot a complicated form → "extract this into a CSV"
+
+You don't need to type any data — Claude reads the image.
