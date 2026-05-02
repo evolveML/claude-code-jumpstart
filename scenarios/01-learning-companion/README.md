@@ -170,13 +170,21 @@ Claude will:
 
 That's an AI assistant. You built it by talking. **It's just text.** You can read it, edit it, share it with a friend by emailing them the file.
 
-**Restart Claude Code** (type `/exit`, then `claude`). Then in any folder, anywhere on your computer:
+**Restart Claude Code** (close the chat or type `/exit`, then start a new Claude session). Then in any folder, anywhere on your computer, just talk to Claude in plain English and mention the agent by name:
 
 ```
-@learning-companion teach me [whatever you want to learn next]
+Hey learning-companion — teach me [whatever you want to learn next]
 ```
 
-The agent — built by Claude, based on you — handles the whole flow. No prompt to remember.
+Or:
+
+```
+Use my learning-companion agent to teach me [topic]
+```
+
+Either way works. The agent — built by Claude, based on you — handles the whole flow. No prompt to remember.
+
+> 💡 **Note on invocation syntax**: If you're using Claude Code in the **terminal**, the shortcut `@learning-companion teach me X` also works. In the **VSCode extension**, the `@` is reserved for file references, so use the natural-language phrasing above instead. Both reach the same agent.
 
 ### Why this matters more than the agent itself
 

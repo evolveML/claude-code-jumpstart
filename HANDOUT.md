@@ -32,10 +32,12 @@ The most powerful pattern in this kit. The recipe is always:
 You don't write code. Claude writes the agent for you, based on the conversation you just had.
 
 Example agents you can build by talking:
-- `@learning-companion` — teach me anything
-- `@data-analyst` — find the story in any data
-- `@interview-coach` — prep me for any interview
-- `@email-writer`, `@code-reviewer`, `@meeting-prepper` — anything you do more than twice
+- **learning-companion** — teach me anything
+- **data-analyst** — find the story in any data
+- **interview-coach** — prep me for any interview
+- **email-writer, code-reviewer, meeting-prepper** — anything you do more than twice
+
+To invoke any of them: in plain English, just say *"Hey [agent-name] — [what you want]"*. Works in VSCode or terminal. (Terminal users can also use `@agent-name` as a shortcut.)
 
 [Full guide on the agents page]({{ "/agents/" | relative_url }})
 

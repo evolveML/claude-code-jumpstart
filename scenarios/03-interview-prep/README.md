@@ -145,11 +145,19 @@ Write the agent definition to ~/.claude/agents/interview-coach.md with:
 Use the standard Claude Code agent format. Read it back to me when done.
 ```
 
-Claude writes the agent. Restart Claude. Next time you have an interview:
+Claude writes the agent. Restart Claude. Next time you have an interview, just talk to Claude in plain English:
 
 ```
-@interview-coach prep me — files are in this folder
+Hey interview-coach — prep me. Files are in this folder.
 ```
+
+Or:
+
+```
+Use my interview-coach agent. The resume, JD, and interviewer info are here.
+```
+
+> 💡 **Terminal users**: `@interview-coach prep me — files are in this folder` also works in the terminal version of Claude Code. In the VSCode extension, use the natural-language phrasing above.
 
 > 💡 **Want a polished reference?** [Here's our curated `interview-coach.md`]({{ "/agents/" | relative_url }}) — read it after Claude writes yours. Compare. The version Claude built for you might miss something ours has, or might be sharper in places. Edit yours and you've got the best of both.
 

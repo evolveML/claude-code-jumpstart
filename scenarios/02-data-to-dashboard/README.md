@@ -142,13 +142,21 @@ Write the agent definition to ~/.claude/agents/data-analyst.md with:
 Use the standard Claude Code agent format. Read it back to me when done.
 ```
 
-Claude writes the agent. Restart Claude (`/exit`, then `claude`). Then in any folder with data:
+Claude writes the agent. Restart Claude (close the chat / `/exit`, then start a new session). Then in any folder with data, just talk to Claude in plain English:
 
 ```
-@data-analyst what's the story in this folder?
+Hey data-analyst — what's the story in this folder?
+```
+
+Or:
+
+```
+Use my data-analyst agent on the files here
 ```
 
 The agent does what just worked, every time, forever. **You built it by talking.**
+
+> 💡 **Terminal users**: `@data-analyst what's the story in this folder?` also works in the terminal version of Claude Code. In the VSCode extension, use the natural-language phrasing above.
 
 > 💡 **Want a polished reference?** [Here's our curated `data-analyst.md`]({{ "/agents/" | relative_url }}) — compare with what Claude wrote for you. Steal ideas. The agent file is yours to edit anytime in VSCode.
 

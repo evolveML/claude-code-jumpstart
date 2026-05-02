@@ -77,15 +77,27 @@ Claude will:
 
 ## How to use an agent (once you have one)
 
-In any folder, after starting `claude`:
+In any folder, after starting Claude (in VSCode or terminal), **just talk to Claude in plain English and mention the agent by name**:
 
 ```
-@learning-companion teach me about ETF investing
-@data-analyst what's the story in this folder?
-@interview-coach prep me — my files are here
+Hey learning-companion — teach me about ETF investing.
 ```
 
-The `@` triggers the agent. Claude loads the agent's instructions and behaves accordingly. The agent persists across sessions and folders — once installed, it's available everywhere.
+```
+Use my data-analyst agent on the files in this folder. What's the story here?
+```
+
+```
+Interview-coach — prep me for tomorrow's interview. My resume and the JD are in this folder.
+```
+
+Claude reads the agent's description, recognizes the trigger, loads the agent's instructions, and behaves accordingly. The agent persists across sessions and folders — once installed, it's available everywhere.
+
+> 💡 **Two invocation paths**:
+> - **Natural language** (works everywhere — VSCode extension AND terminal): "Hey [agent-name] — [what you want]"
+> - **`@agent-name` shortcut** (terminal only — in the VSCode extension `@` is reserved for file references): `@learning-companion teach me X`
+>
+> Use natural language if you want one syntax that works in both. Use `@` if you're in the terminal and want fewer keystrokes.
 
 ---
 
