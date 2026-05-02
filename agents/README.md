@@ -1,5 +1,6 @@
 ---
 title: "Agents — Convert Any Workflow Into a Reusable Agent"
+permalink: /agents/
 ---
 
 # Convert Any Workflow Into a Reusable Agent
