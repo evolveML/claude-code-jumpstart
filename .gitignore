@@ -1,0 +1,24 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor junk
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node junk (in case anyone runs npm in here)
+node_modules/
+
+# Output that learners produce when they actually run the scenarios
+# (we don't want their personal data committed to the public repo)
+LEARNING_PLAN.md
+ANALYSIS.md
+INTERVIEW_PREP.md
+dashboard.html
+progress/
+transcript.txt
+
+# Anything in a folder named for a personal interview
+my-interview-*/

@@ -1,0 +1,39 @@
+[Sample transcript — "How to Start a Shopify Store in 2024 (Beginner Walkthrough)" — approx. 9 minutes. This is a fabricated but realistic transcript for demo purposes. For the real workshop experience, replace this with a transcript from notegpt.io of a video YOU want to learn from.]
+
+Hey everyone, welcome back to the channel. Today we're going to walk through exactly how to start a Shopify store from scratch in 2024. Whether you're selling t-shirts, candles, digital downloads, or anything else, this video is going to take you from zero to your first product live, and I'll share the mistakes I made the first time around so you don't make them too. Let's get into it.
+
+Okay so first things first — before you even create a Shopify account, you need to figure out what you're selling. I know that sounds obvious but I see so many people skip this step. They open Shopify, they pick a theme, they spend three weeks designing their logo, and then they realize they have no product. Don't be that person. Spend a weekend thinking about your niche.
+
+Here's how I think about niche. You want something that's specific enough that people will say "oh, this is for me" but big enough that there's actually demand. So instead of "candles," think "soy candles for first-time apartment renters" or "candles inspired by national parks." Specific. The riches are in the niches, as they say.
+
+Now once you have your niche, decide your business model. There are basically three options. One: you make the product yourself — that's like handmade jewelry or art prints. Pros: full control, high margins. Cons: you can't scale beyond your hands. Two: you do print-on-demand with services like Printful or Printify — they handle production and shipping for t-shirts, mugs, posters. Pros: zero inventory, low risk. Cons: lower margins, less unique. Three: you do dropshipping or wholesale — you find a supplier on AliExpress or domestic, they ship for you. Pros: lots of products available. Cons: very competitive, slow shipping, lots of saturated niches.
+
+For a first store, I'd recommend print-on-demand. It's the lowest risk way to validate that your niche works without buying inventory.
+
+Okay step two — go to shopify.com and start your free trial. They give you 3 days free, then you pay $1 a month for the first 3 months. Don't pay full price yet, you don't need to. When you sign up, just give it a temporary name. You can change your store name later.
+
+Once you're in the Shopify admin, here's what I want you to do, in this order. First, click "Online Store" then "Themes." Pick a free theme. Don't pay for a theme yet. Dawn is great, Refresh is great. Save your money. Then click "Settings" and add your business name, your address (you can use your home address for now), and connect a payment processor. Shopify Payments is the easiest, just use that.
+
+Now we're ready to add a product. Click "Products" then "Add product." If you're doing print-on-demand, install the Printful or Printify app first. Search for it in the app store inside Shopify, install it, connect your design. Their tools will let you mockup the product without you ever touching it.
+
+A really important thing here — your product photos. People scroll past stores with bad photos. If you're using print-on-demand, use the lifestyle mockups they provide, not the plain product shots. If you're making something yourself, take photos in natural daylight, near a window, with a clean background. You don't need a fancy camera — your phone is great. Just take twenty shots and pick three.
+
+Your product description matters too. Don't just list features. Tell a story. "This candle smells like a redwood forest after rain. Light it when you want your apartment to feel like a cabin getaway." That sells. "Soy candle, 8 oz, scented" — that doesn't.
+
+Okay now your store has a product. Time to set up shipping. Go to "Settings" then "Shipping." For your first store I recommend free shipping with the cost built into the product price — people love seeing free shipping. So if your candle costs you $6 and shipping costs $4, charge $20 with free shipping. Better than $14 with $4 shipping. Same money to you, way better conversion.
+
+Now domain name. You can buy one through Shopify for around $14 a year, or go to Namecheap or Google Domains and buy it cheaper there, then point it to Shopify — it's a five-minute task. Get your name dot com if you can. If not, dot store and dot shop are fine alternatives.
+
+Last big step before launch — your home page. Use the theme's built-in sections to add a hero image, a featured product collection, and an "About" section. Tell people who you are. People buy from people.
+
+Once your store is up, time for marketing. The biggest mistake I made was launching and then waiting. Don't wait. Day one — post about it to your friends and family on Instagram, Facebook, wherever. Day one. They're your first customers and your first reviews.
+
+After that, run a small Facebook or Instagram ad — like five dollars a day for a week. The goal isn't sales, the goal is data. You're learning what creative works, what audience responds. After a week you have data, then you scale up the ones that work.
+
+Long term, organic content on TikTok or Instagram beats paid ads almost every time for niche stores. Show your process. Show packing orders. Show customers using the product. Authenticity converts.
+
+Okay that's the whirlwind tour. Quick recap. One — pick a niche, specific but with demand. Two — choose a business model, print-on-demand if you're starting fresh. Three — sign up for Shopify, free trial, pick a free theme. Four — add your first product with great photos and a story. Five — set up shipping, domain, home page. Six — launch immediately, market with friends and family, then small paid ads, then organic content.
+
+If you do this in one weekend, you'll have a real store. If you wait for it to be perfect, you'll never launch. Done is better than perfect, especially in e-commerce.
+
+Drop a comment if you're going to start your store this weekend. I'll do my best to answer questions. And if you want a deeper dive on any of these — niche selection, photo tips, ads, organic growth — let me know in the comments and I'll make a follow-up video. Thanks for watching, and good luck with your store.
