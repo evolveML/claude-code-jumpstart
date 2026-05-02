@@ -1,0 +1,11 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Hide the auto-injected project-name link H1 that jekyll-theme-primer
+   adds at the top of every page — it duplicates the actual page heading
+   from each markdown file. */
+.markdown-body > h1:first-of-type {
+  display: none;
+}
