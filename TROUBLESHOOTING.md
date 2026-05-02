@@ -1,6 +1,11 @@
+---
+title: "Troubleshooting"
+permalink: /troubleshooting/
+---
+
 # Troubleshooting
 
-The five problems that hit 80% of first-time users, with fixes.
+The seven problems that hit 80% of first-time users, with fixes.
 
 ---
 
@@ -130,3 +135,7 @@ xcode-select --install
 ## Still stuck?
 
 Open an issue on this repo, or ask the person running the workshop. We'll add your problem to this doc so the next person doesn't hit it.
+
+---
+
+← [Back to Claude Code Jumpstart home]({{ "/" | relative_url }}) · [Prework]({{ "/prework/" | relative_url }}) · [Detailed install guide]({{ "/install/" | relative_url }})

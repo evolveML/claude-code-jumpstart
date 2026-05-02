@@ -1,3 +1,8 @@
+---
+title: "Workshop Takeaway"
+permalink: /handout/
+---
+
 # Workshop Takeaway — One Page
 
 You learned how to use Claude Code today. Here's how to keep going.
@@ -93,10 +98,14 @@ Always [behavior]. Never [bad behavior].
 1. `claude: command not found` → close + reopen terminal
 2. Auth failed → `claude /logout` then `claude` again
 3. Transcript download failed → use `notegpt.io` or the sample we provided
-4. Something else → see `TROUBLESHOOTING.md` in the repo
+4. Something else → [Troubleshooting]({{ "/troubleshooting/" | relative_url }})
 
 ---
 
 **The bigger idea**: AI is just instructions written in plain English. You don't need to be a programmer to build with it. The 3 things you did today, you can repeat 50 times this year.
 
 Built with care by [EvolveML](https://evolveml.io).
+
+---
+
+← [Back to home]({{ "/" | relative_url }}) · [Scenario 1: Learning Companion]({{ "/scenarios/01-learning-companion/" | relative_url }}) · [Scenario 2: Data → Dashboard]({{ "/scenarios/02-data-to-dashboard/" | relative_url }}) · [Scenario 3: Interview Prep]({{ "/scenarios/03-interview-prep/" | relative_url }}) · [Agents]({{ "/agents/" | relative_url }})

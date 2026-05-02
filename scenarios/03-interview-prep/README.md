@@ -8,7 +8,7 @@ permalink: /scenarios/03-interview-prep/
 **Going in for an interview? Drop in your resume, the job description, and the interviewers' info. Claude preps you with likely questions, your strongest answers, and what to ask back.**
 
 > ⏱ **Time**: ~10 minutes for the prep, plus an optional mock interview
-> 🛠 **You need**: Claude Code installed (see [PREWORK](../../PREWORK.md))
+> 🛠 **You need**: Claude Code installed (see [Prework]({{ "/prework/" | relative_url }}))
 > 📂 **No git clone required** — everything is on this page
 
 ---
@@ -147,3 +147,7 @@ Claude Code runs on your computer, but it sends your prompts (including resume c
 - If interviewing with a competitor of your current company and the JD is highly sensitive, use generic descriptions instead of pasting verbatim
 
 After the interview, you can delete the folder. Nothing stays on Anthropic's side.
+
+---
+
+← [Back to home]({{ "/" | relative_url }}) · [Scenario 1: Learning Companion]({{ "/scenarios/01-learning-companion/" | relative_url }}) · [Scenario 2: Data → Dashboard]({{ "/scenarios/02-data-to-dashboard/" | relative_url }}) · [Agents]({{ "/agents/" | relative_url }}) · [Troubleshooting]({{ "/troubleshooting/" | relative_url }})

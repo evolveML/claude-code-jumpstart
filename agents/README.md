@@ -1,3 +1,7 @@
+---
+title: "Agents — Convert Any Workflow Into a Reusable Agent"
+---
+
 # Convert Any Workflow Into a Reusable Agent
 
 Once you've run a prompt twice and you like how it works, **stop pasting it** — turn it into an agent. One file, one folder, infinite re-use.
@@ -123,3 +127,7 @@ Save the file. Restart Claude. `@your-agent-name [request]` and it works.
 
 - Anthropic's [official agent docs](https://docs.claude.com/en/docs/claude-code/agents.md)
 - The [Claude Code GitHub](https://github.com/anthropics/claude-code) for examples
+
+---
+
+← [Back to Claude Code Jumpstart home]({{ "/" | relative_url }}) · [Scenario 1]({{ "/scenarios/01-learning-companion/" | relative_url }}) · [Scenario 2]({{ "/scenarios/02-data-to-dashboard/" | relative_url }}) · [Scenario 3]({{ "/scenarios/03-interview-prep/" | relative_url }})

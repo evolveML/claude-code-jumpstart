@@ -8,7 +8,7 @@ permalink: /scenarios/02-data-to-dashboard/
 **Drop in any data — a CSV, a spreadsheet, even a screenshot — and Claude finds the story. Optionally, it builds you a chart.**
 
 > ⏱ **Time**: ~10 minutes
-> 🛠 **You need**: Claude Code installed (see [PREWORK](../../PREWORK.md))
+> 🛠 **You need**: Claude Code installed (see [Prework]({{ "/prework/" | relative_url }}))
 > 📂 **No git clone required** — everything is on this page
 
 ---
@@ -143,3 +143,7 @@ The most under-used capability of Claude Code is **image input**. Try:
 - Screenshot a complicated form → "extract this into a CSV"
 
 You don't need to type any data — Claude reads the image.
+
+---
+
+← [Back to home]({{ "/" | relative_url }}) · [Scenario 1: Learning Companion]({{ "/scenarios/01-learning-companion/" | relative_url }}) · [Scenario 3: Interview Prep]({{ "/scenarios/03-interview-prep/" | relative_url }}) · [Agents]({{ "/agents/" | relative_url }}) · [Troubleshooting]({{ "/troubleshooting/" | relative_url }})

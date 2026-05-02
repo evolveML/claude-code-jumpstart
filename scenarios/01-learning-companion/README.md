@@ -10,7 +10,7 @@ permalink: /scenarios/01-learning-companion/
 By the end you'll have a `LEARNING_PLAN.md` with phases and TODOs, and Claude teaching you Phase 1 alongside you.
 
 > ⏱ **Time**: ~25 minutes for the full first phase
-> 🛠 **You need**: Claude Code installed (see [PREWORK](../../PREWORK.md))
+> 🛠 **You need**: Claude Code installed (see [Prework]({{ "/prework/" | relative_url }}))
 > 📂 **No git clone required** — everything you need is on this page
 
 ---
@@ -168,3 +168,7 @@ For a reference of what `LEARNING_PLAN.md` should look like, see [sample-output.
 - **Use a book/article instead**: paste the article text where the transcript would go.
 - **Resume an old plan**: in the same folder later, just type "where were we?" — Claude reads `LEARNING_PLAN.md` and picks up.
 - **Switch the pace**: tell Claude "go faster, I already know the basics" or "slow down, this is too much."
+
+---
+
+← [Back to home]({{ "/" | relative_url }}) · [Scenario 2: Data → Dashboard]({{ "/scenarios/02-data-to-dashboard/" | relative_url }}) · [Scenario 3: Interview Prep]({{ "/scenarios/03-interview-prep/" | relative_url }}) · [Agents]({{ "/agents/" | relative_url }}) · [Troubleshooting]({{ "/troubleshooting/" | relative_url }})

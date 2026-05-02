@@ -1,3 +1,8 @@
+---
+title: "Pre-Workshop Setup"
+permalink: /prework/
+---
+
 # Pre-Workshop Setup
 
 **Do this 24 hours before the workshop.** Total time: about 15 minutes.
@@ -147,7 +152,7 @@ Show up to the workshop with:
 - ✅ Signed into Anthropic (you ran `claude` and chatted with it once)
 - ✅ Git working
 
-If **anything** broke, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md) or just show up 15 minutes early to the workshop.
+If **anything** broke, see [Troubleshooting]({{ "/troubleshooting/" | relative_url }}) or just show up 15 minutes early to the workshop.
 
 ---
 
@@ -159,3 +164,7 @@ If **anything** broke, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md) or just show
 - 💡 **Get sent home with two more recipes** — data-to-dashboard and interview prep
 
 See you there!
+
+---
+
+← [Back to Claude Code Jumpstart home]({{ "/" | relative_url }}) · [Detailed install guide]({{ "/install/" | relative_url }}) · [Troubleshooting]({{ "/troubleshooting/" | relative_url }})

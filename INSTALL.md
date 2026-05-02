@@ -1,6 +1,11 @@
+---
+title: "Detailed Install Guide"
+permalink: /install/
+---
+
 # Detailed Install Guide
 
-If [PREWORK.md](PREWORK.md) didn't work for you, or you want OS-specific detail, this is the full reference.
+If the [Prework]({{ "/prework/" | relative_url }}) didn't work for you, or you want OS-specific detail, this is the full reference.
 
 **Supported**: macOS, Windows 10/11, Linux.
 **Not supported for the workshop**: Chromebooks (no Node.js without enabling Linux/Crostini, which is itself a setup project), iPads, phones. If that's all you have, pair up with someone who has a Mac or Windows laptop.
@@ -168,4 +173,8 @@ All five commands should return version numbers, not errors.
 
 ## Still stuck?
 
-See [TROUBLESHOOTING.md](TROUBLESHOOTING.md), or come to the workshop 15 minutes early.
+See [Troubleshooting]({{ "/troubleshooting/" | relative_url }}), or come to the workshop 15 minutes early.
+
+---
+
+← [Back to Claude Code Jumpstart home]({{ "/" | relative_url }}) · [Prework]({{ "/prework/" | relative_url }}) · [Troubleshooting]({{ "/troubleshooting/" | relative_url }})

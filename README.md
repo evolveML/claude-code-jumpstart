@@ -26,11 +26,28 @@ Each link below opens a self-contained page with the prompt to copy and step-by-
 
 **Do this 24 hours before** so we don't burn time installing in the room. It takes ~15 minutes:
 
-➡️ **[PREWORK.md — install everything](PREWORK.md)**
+➡️ **[Prework — install everything]({{ "/prework/" | relative_url }})**
 
 > **Computer needed**: Mac, Windows, or Linux laptop. Chromebooks, iPads, and phones won't work for this workshop — bring a real laptop or pair up with someone who has one.
 
 If you get stuck, no shame — show up early or pair up with someone who's done it.
+
+---
+
+## 📌 Don't worry about finishing in the workshop
+
+Everything in this kit is online and free, forever. **You can pick it up tonight, this weekend, or six months from now** — the pages don't expire. Bookmark this URL:
+
+> **`evolveml.github.io/claude-code-jumpstart`**
+
+You have on this site:
+- [Three scenarios]({{ "/scenarios/01-learning-companion/" | relative_url }}) with copy-paste prompts and sample data
+- [Three reusable agents]({{ "/agents/" | relative_url }}) you install with one command
+- [Prework]({{ "/prework/" | relative_url }}) and [detailed install]({{ "/install/" | relative_url }}) for any computer
+- [Troubleshooting]({{ "/troubleshooting/" | relative_url }}) for the most common 7 issues
+- A [printable handout]({{ "/handout/" | relative_url }}) summarizing everything in one page
+
+In the workshop we'll do **just one** scenario together. Don't try to do all three live — try the others on your own this week.
 
 ---
 
@@ -47,23 +64,20 @@ Once you've done the [prework](PREWORK.md) (VSCode + Claude Code installed):
 
 ---
 
-## What's in this kit
+## All the pages
 
-```
-PREWORK.md                  ← Install everything before workshop (start here)
-INSTALL.md                  ← Detailed install for Mac/Windows/Linux
-TROUBLESHOOTING.md          ← When things break
-scenarios/
-  01-learning-companion/    ← The in-room scenario — has prompt + sample transcript
-  02-data-to-dashboard/     ← Try at home — has prompt + 2 sample CSVs
-  03-interview-prep/        ← Try at home — has prompt + folder template
-agents/
-  learning-companion.md     ← Three reusable agents you install with one curl command
-  data-analyst.md
-  interview-coach.md
-```
+| Page | What it is |
+|---|---|
+| **[Prework]({{ "/prework/" | relative_url }})** | Install everything 24h before the workshop (start here) |
+| **[Detailed install]({{ "/install/" | relative_url }})** | OS-specific guide for Mac, Windows, Linux |
+| **[Troubleshooting]({{ "/troubleshooting/" | relative_url }})** | When things break |
+| **[Scenario 1: Learning Companion]({{ "/scenarios/01-learning-companion/" | relative_url }})** | Pick a YouTube video → personal tutor with phases + TODOs |
+| **[Scenario 2: Data → Dashboard]({{ "/scenarios/02-data-to-dashboard/" | relative_url }})** | CSV / spreadsheet / screenshot → analysis + optional chart |
+| **[Scenario 3: Interview Prep Coach]({{ "/scenarios/03-interview-prep/" | relative_url }})** | Resume + JD + interviewer info → predicted questions + mock interview |
+| **[Agents]({{ "/agents/" | relative_url }})** | Install any of the three as a permanent `@agent` you can use forever |
+| **[Handout (1-pager)]({{ "/handout/" | relative_url }})** | Printable summary you can take home |
 
-Each scenario page is self-contained: read it, copy the prompt, paste, done.
+Each scenario page is self-contained: read it, copy the prompt, paste into Claude Code, done.
 
 ---
 
