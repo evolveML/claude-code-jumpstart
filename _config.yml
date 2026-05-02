@@ -2,3 +2,8 @@ theme: jekyll-theme-primer
 title: Claude Code Jumpstart
 description: Get comfortable with AI by building three useful things, fast.
 show_downloads: false
+
+# Make every subfolder's README.md render as index.html so folder URLs
+# like /scenarios/01-learning-companion/ work without trailing /README.html
+plugins:
+  - jekyll-readme-index
