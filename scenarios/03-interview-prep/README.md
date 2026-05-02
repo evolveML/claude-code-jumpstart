@@ -11,7 +11,7 @@ permalink: /scenarios/03-interview-prep/
 > 🛠 **You need**: Claude Code installed (see [Prework]({{ "/prework/" | relative_url }}))
 > 📂 **No git clone required** — everything is on this page
 
-> 👉 **How to copy a prompt**: Throughout this page you'll see prompts inside gray boxes. **Hover your mouse over any gray box and a "copy" icon appears in the top-right corner — click it to copy the whole prompt in one click.** (If the icon doesn't appear, just select the text manually with your mouse and copy it the normal way.)
+> 👉 **How to copy a prompt**: Throughout this page you'll see prompts inside gray boxes. **Hover your mouse over any gray box and a "Copy" button appears in the top-right corner — click it to copy the whole prompt in one click.** You'll see "Copied!" flash for a second to confirm. Then paste into Claude Code.
 
 ---
 
