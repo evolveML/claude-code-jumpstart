@@ -18,7 +18,7 @@ Each link below opens a self-contained page with the prompt to copy and step-by-
 | 2 | **[Data → Dashboard ➜](scenarios/02-data-to-dashboard/)** | Drop in a spreadsheet, CSV, or screenshot. Claude analyzes it, finds the story, and writes a one-page summary or chart. | ~10 min |
 | 3 | **[Interview Prep Coach ➜](scenarios/03-interview-prep/)** | Drop in your resume, the job description, and the interviewers' LinkedIn pages. Claude preps you with likely questions, your strongest answers, and what to ask back. | ~10 min |
 
-**Then** — you take any of the three and turn it into a reusable agent. One file. One command. Forever yours.
+**Then** — the magic moment — you ask Claude to turn what you just did into a reusable agent. **Claude writes the agent for you, by reflecting on the conversation you just had.** No code, no download. Use it forever as `@your-agent` in any folder. ([How that works ➜]({{ "/agents/" | relative_url }}))
 
 ---
 

@@ -128,21 +128,55 @@ The trick: pick a video that's **5–15 minutes long** and has **closed captions
 
 ---
 
-## When you're done — install this as a reusable agent
+## When you're done — have Claude build you an agent (no code, no download)
 
-So you don't have to paste the prompt every time, install the Learning Companion as a Claude Code agent. One line:
+This is the most important moment in the whole workshop. You just used Claude with a long prompt. Now you're going to **ask Claude to turn that prompt into a permanent agent** — so you never paste it again. No curl, no copying our files. Claude writes the agent for you, based on what just worked.
 
-```bash
-mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/learning-companion.md -o ~/.claude/agents/learning-companion.md
-```
-
-Restart Claude Code. Now anywhere on your computer, in any folder:
+In the **same Claude session you've been using**, paste this:
 
 ```
-@learning-companion teach me about [whatever you want to learn next]
+Turn what we just did into a reusable Claude Code agent.
+
+Write the agent definition to ~/.claude/agents/learning-companion.md with:
+- YAML frontmatter with `name: learning-companion` and a clear `description` of when to invoke it (e.g., "use when the user wants to learn a topic from a YouTube transcript, article, or just a topic name")
+- A system prompt below the frontmatter that captures how you handled my request — the planning phase (ask my goal, write LEARNING_PLAN.md, set up TODOs), the teaching phase (one concept at a time, give exercises, mark TODOs done), the tone (warm, direct, patient — never just give me the answer)
+- A note about when to refuse or redirect (e.g., if I ask you to do my actual work for me)
+
+Use the standard Claude Code agent format. After you write the file, read it back to me so I can review.
 ```
 
-That's it. No prompt to remember. The agent handles the whole flow.
+Claude will:
+1. Reflect on what just happened in this conversation
+2. Distill the pattern into an agent system prompt
+3. Write the file to `~/.claude/agents/learning-companion.md`
+4. Show you what it wrote
+
+**Restart Claude Code** (type `/exit`, then `claude`). Then in any folder, anywhere on your computer:
+
+```
+@learning-companion teach me [whatever you want to learn next]
+```
+
+The agent — built by Claude, based on you — handles the whole flow. No prompt to remember.
+
+### Why this matters more than the agent itself
+
+You just built an AI assistant **by talking**. No code. No `git clone`. You described an outcome, Claude did the work, and now there's a permanent thing on your computer that captures that capability.
+
+**The recipe is always the same**:
+1. Get Claude to do the thing once (with a long prompt)
+2. Ask Claude: "make this into a reusable agent"
+3. Use the agent forever
+
+Apply this to anything in your life:
+- A great email you just wrote → `@email-writer`
+- How Claude debugged your code today → `@code-reviewer`
+- Your interview prep flow → `@interview-coach`
+- How you summarize meetings → `@meeting-summarizer`
+
+You don't need to be a programmer. You need to know what "good" looks like — and let Claude do the encoding.
+
+> 💡 **Want a polished reference?** [Here's our curated version of `learning-companion.md`]({{ "/agents/" | relative_url }}) — read it AFTER Claude writes yours and compare. Borrow what you like. The agent file is just text — nothing is locked in. You can edit yours anytime by opening `~/.claude/agents/learning-companion.md` in VSCode.
 
 ---
 

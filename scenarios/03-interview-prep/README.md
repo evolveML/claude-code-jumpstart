@@ -123,19 +123,31 @@ Speak your answers out loud (yes, even if alone). Claude will critique and you'l
 
 ---
 
-## When you're done — install as an agent
+## When you're done — have Claude build you an `@interview-coach` agent
 
-```bash
-mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/interview-coach.md -o ~/.claude/agents/interview-coach.md
+Don't curl our file. Have Claude turn what just happened into an agent for you.
+
+In the same Claude session, paste:
+
+```
+Turn what we just did into a reusable Claude Code agent.
+
+Write the agent definition to ~/.claude/agents/interview-coach.md with:
+- YAML frontmatter with `name: interview-coach` and a description of when to invoke it (e.g., "use when the user is preparing for a job interview and the folder has resume/JD/interviewer info")
+- A system prompt that captures the phases of what you just did: read everything, map the gap (resume vs JD), predict 8-12 questions including concern-driven ones, draft 3 STAR-format answers, generate questions to ask back (specific not generic), call out concerns about me + honest answers
+- The mock interview mode: when I say "interview me," ask one question at a time, give 3-part feedback (what worked / what didn't / better version), don't move on until I say "next"
+- The style: direct, not gentle. No flattery. Anchor everything to evidence in the resume/JD.
+
+Use the standard Claude Code agent format. Read it back to me when done.
 ```
 
-Now next time you have an interview:
+Claude writes the agent. Restart Claude. Next time you have an interview:
 
 ```
 @interview-coach prep me — files are in this folder
 ```
 
-Done. Same depth, no prompt to copy.
+> 💡 **Want a polished reference?** [Here's our curated `interview-coach.md`]({{ "/agents/" | relative_url }}) — read it after Claude writes yours. Compare. The version Claude built for you might miss something ours has, or might be sharper in places. Edit yours and you've got the best of both.
 
 ---
 

@@ -121,17 +121,32 @@ Paste the prompt into Claude Code. Replace the placeholders. Hit Enter. Open the
 
 ---
 
-## When you're done — install as an agent
+## When you're done — have Claude build you a `@data-analyst` agent
 
-```bash
-mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/data-analyst.md -o ~/.claude/agents/data-analyst.md
+Don't download our file — let Claude write the agent for you, based on what just worked.
+
+In the same Claude session, paste:
+
+```
+Turn what we just did into a reusable Claude Code agent.
+
+Write the agent definition to ~/.claude/agents/data-analyst.md with:
+- YAML frontmatter with `name: data-analyst` and a description of when to invoke it (e.g., "use when the user has a data file, screenshot of data, or messy folder of files and wants insights")
+- A system prompt that captures how you analyzed my data — the inventory step (figure out what files are here, what columns mean), the find-the-story step (the biggest insight, trends, outliers, what's missing), and the output format (top finding in 1 sentence, 3 key insights with actual numbers, what to do next)
+- The style rules: always cite specific numbers, lead with the surprise (not the obvious), don't write code unless asked
+
+Use the standard Claude Code agent format. Read it back to me when done.
 ```
 
-Restart Claude. Now in any folder with data:
+Claude writes the agent. Restart Claude (`/exit`, then `claude`). Then in any folder with data:
 
 ```
 @data-analyst what's the story in this folder?
 ```
+
+The agent does what just worked, every time, forever. **You built it by talking.**
+
+> 💡 **Want a polished reference?** [Here's our curated `data-analyst.md`]({{ "/agents/" | relative_url }}) — compare with what Claude wrote for you. Steal ideas. The agent file is yours to edit anytime in VSCode.
 
 ---
 

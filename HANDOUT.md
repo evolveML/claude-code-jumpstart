@@ -21,17 +21,23 @@ Each scenario is a **prompt template + sample data**. Open the folder, follow th
 
 ---
 
-## The agents you can install right now
+## How to build your own agents (the meta-skill)
 
-```bash
-mkdir -p ~/.claude/agents
-cp agents/*.md ~/.claude/agents/
-```
+The most powerful pattern in this kit. The recipe is always:
 
-Then in any folder:
-- `@learning-companion teach me about [anything]`
-- `@data-analyst what's the story in this folder?`
-- `@interview-coach prep me — files are here`
+1. **Use Claude to do the thing once** (with a long prompt — see any scenario)
+2. **Ask Claude**: "turn what we just did into a reusable agent at `~/.claude/agents/<name>.md`"
+3. **Restart Claude** → use it forever as `@<name>` in any folder
+
+You don't write code. Claude writes the agent for you, based on the conversation you just had.
+
+Example agents you can build by talking:
+- `@learning-companion` — teach me anything
+- `@data-analyst` — find the story in any data
+- `@interview-coach` — prep me for any interview
+- `@email-writer`, `@code-reviewer`, `@meeting-prepper` — anything you do more than twice
+
+[Full guide on the agents page]({{ "/agents/" | relative_url }})
 
 ---
 

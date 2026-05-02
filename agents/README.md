@@ -1,11 +1,13 @@
 ---
-title: "Agents — Convert Any Workflow Into a Reusable Agent"
+title: "Agents — Build Your Own (and reference ours)"
 permalink: /agents/
 ---
 
-# Convert Any Workflow Into a Reusable Agent
+# Agents — Build Your Own
 
-Once you've run a prompt twice and you like how it works, **stop pasting it** — turn it into an agent. One file, one folder, infinite re-use.
+The most important idea in this whole kit: **you don't download agents — you have Claude build them for you.**
+
+Once you've used Claude with a long prompt and it worked well, you ask Claude to turn that prompt into a permanent agent. No code, no curl, no copying our files. Claude writes the agent based on what just worked between the two of you.
 
 ---
 
@@ -14,120 +16,131 @@ Once you've run a prompt twice and you like how it works, **stop pasting it** �
 An agent is just a `.md` file in `~/.claude/agents/` that tells Claude how to behave when you call it.
 
 It has two parts:
-1. **Frontmatter** — a few lines at the top that say "this agent is named X, here's when to use it, here are its tools"
+1. **Frontmatter** — a few lines at the top: `name`, `description` (when to use it)
 2. **System prompt** — the instructions for how it should behave
 
-That's it. No code, no servers, nothing to deploy.
+That's it. No servers, no deployment, nothing to compile. **It's text.**
 
 ---
 
-## How to install an agent (no git clone needed)
+## The recipe (works for any workflow)
 
-Pick the one(s) you want. Each is a single curl command:
-
-**Learning Companion**:
-```bash
-mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/learning-companion.md -o ~/.claude/agents/learning-companion.md
+```
+1. Get Claude to do the thing once (with a long prompt — see any of the scenarios)
+2. Ask Claude: "make this into a reusable agent at ~/.claude/agents/<name>.md"
+3. Restart Claude → invoke as @<name> forever
 ```
 
-**Data Analyst**:
-```bash
-mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/data-analyst.md -o ~/.claude/agents/data-analyst.md
-```
+That's the meta-skill. Apply it to anything in your life:
 
-**Interview Coach**:
-```bash
-mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/interview-coach.md -o ~/.claude/agents/interview-coach.md
-```
+| Something you do repeatedly | Build the agent |
+|---|---|
+| Write a great cover letter | `@cover-letter-writer` |
+| Review code or PRs | `@code-reviewer` |
+| Prep for board / leadership meetings | `@meeting-prepper` |
+| Triage your inbox | `@email-triager` |
+| Plan a trip | `@trip-planner` |
+| Research a company before a sales call | `@account-researcher` |
+| Write LinkedIn posts in your voice | `@post-drafter` |
+| Summarize long reads | `@reading-summarizer` |
 
-**All three at once**:
-```bash
-mkdir -p ~/.claude/agents && \
-  curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/learning-companion.md -o ~/.claude/agents/learning-companion.md && \
-  curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/data-analyst.md -o ~/.claude/agents/data-analyst.md && \
-  curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/interview-coach.md -o ~/.claude/agents/interview-coach.md
-```
-
-That's it. Restart Claude Code and the agents are live.
-
-> 💡 **If you cloned the repo**, you can also just `cp agents/*.md ~/.claude/agents/` and skip the curl.
-
-> 💡 **Don't have curl?** (Rare on modern systems.) View the agent file on GitHub, copy the raw text, and save it to `~/.claude/agents/[name].md` manually.
+You don't need to be a programmer. You need to know what "good" looks like — and let Claude do the encoding.
 
 ---
 
-## How to use an agent
+## How to ask Claude to build an agent
+
+After you've successfully used Claude on a task, paste something like this:
+
+```
+Turn what we just did into a reusable Claude Code agent.
+
+Write the agent definition to ~/.claude/agents/<NAME>.md with:
+- YAML frontmatter with `name: <name>` and a clear `description` of when to invoke it
+- A system prompt that captures how you handled my request — the steps you took, the tone you used, any rules about what to do or refuse
+- Use the standard Claude Code agent format
+
+Read the file back to me when you're done.
+```
+
+Replace `<NAME>` with whatever you want to call it (kebab-case, e.g., `email-writer`).
+
+Claude will:
+1. Reflect on the conversation we just had
+2. Distill it into a system prompt
+3. Write the file
+4. Show you what it wrote
+
+**Restart Claude Code** (`/exit`, then `claude`) and the agent is live. Use it as `@<name>` in any folder, anywhere.
+
+---
+
+## How to use an agent (once you have one)
 
 In any folder, after starting `claude`:
 
 ```
 @learning-companion teach me about ETF investing
-```
-
-```
 @data-analyst what's the story in this folder?
-```
-
-```
 @interview-coach prep me — my files are here
 ```
 
-The `@` triggers the agent. Claude will load the agent's instructions and behave accordingly. The agent persists across sessions — once installed, it's available everywhere.
+The `@` triggers the agent. Claude loads the agent's instructions and behaves accordingly. The agent persists across sessions and folders — once installed, it's available everywhere.
 
 ---
 
-## Agents in this kit
+## Polished reference agents (to compare your build against)
 
-| Agent | When to invoke | What it does |
-|---|---|---|
-| **`@learning-companion`** | Anytime you want to learn something | Builds phased learning plans with TODOs, teaches alongside you |
-| **`@data-analyst`** | When you have a data file or screenshot | Reads it, finds the story, writes analysis (and optionally a dashboard HTML) |
-| **`@interview-coach`** | Before an interview | Reads your resume + JD + interviewers' info, builds prep doc, runs mock interviews |
+After Claude writes an agent for you, you might want to see how a more polished version looks. Here are three reference agents we built. **Don't install these blindly** — use them to compare with what Claude built for you, borrow ideas, and edit yours.
+
+| Agent | View / read it |
+|---|---|
+| `@learning-companion` | [agents/learning-companion.md](https://github.com/evolveML/claude-code-jumpstart/blob/main/agents/learning-companion.md) |
+| `@data-analyst` | [agents/data-analyst.md](https://github.com/evolveML/claude-code-jumpstart/blob/main/agents/data-analyst.md) |
+| `@interview-coach` | [agents/interview-coach.md](https://github.com/evolveML/claude-code-jumpstart/blob/main/agents/interview-coach.md) |
+
+If you want to skip building your own and just install one of these as a starting point, you can — open the file on GitHub, click "Raw," copy the contents, and save it to `~/.claude/agents/<name>.md` on your machine. (Or use `curl` if you're terminal-comfortable — see the bottom of this page.)
+
+But the **better** path: have Claude write yours first. Then read ours. You'll learn more about how the file works, and yours will be more attuned to your specific style.
 
 ---
 
-## Building your own agent
+## Tips for editing an agent file
 
-Once you understand the pattern, you can write your own. Pick any prompt you've used twice and want to reuse, and:
+You'll iterate. The first agent Claude writes you is rarely perfect. Open `~/.claude/agents/<name>.md` in VSCode and:
 
-1. Create a new file: `~/.claude/agents/[your-agent-name].md`
-2. Use this template:
+- **One agent, one job.** Don't bolt new tasks onto an existing agent — build a new one.
+- **Description matters.** Claude reads it to decide *whether to invoke* the agent. Be specific. "Use when..." beats "for general use."
+- **Iterate based on usage.** Use the agent for a week. Notice what's annoying. Edit the prompt. Test again.
+- **Be explicit about tone.** Agents inherit Claude's default behaviors unless you override them. If you want it terse, say "be terse." If you want it to push back, say "challenge me before agreeing."
+- **Share with friends.** Agent files are just `.md` — email them, paste them in Slack, post them in a gist. People can drop them in their own `~/.claude/agents/` folder.
 
-```markdown
 ---
-name: your-agent-name
-description: When to use this agent. Be specific — Claude reads this to decide whether to route to you.
----
 
-You are an expert at [thing]. When the user invokes you, you should:
+## If you really want to install ours via the command line
 
-1. [First thing you do]
-2. [Second thing]
-...
+For folks comfortable with terminal — these one-liners install our reference agents directly:
 
-Always [behavior they want consistently].
-Never [behavior they don't want].
-
-[Any other context, examples, or guardrails.]
+```bash
+mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/learning-companion.md -o ~/.claude/agents/learning-companion.md
 ```
 
-Save the file. Restart Claude. `@your-agent-name [request]` and it works.
+```bash
+mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/data-analyst.md -o ~/.claude/agents/data-analyst.md
+```
 
----
+```bash
+mkdir -p ~/.claude/agents && curl -fsSL https://raw.githubusercontent.com/evolveML/claude-code-jumpstart/main/agents/interview-coach.md -o ~/.claude/agents/interview-coach.md
+```
 
-## Pro tips
-
-- **One agent, one job.** Don't build a "do everything" agent — build small focused ones and chain them.
-- **Description matters.** Claude uses the description to decide *whether to call* an agent. Make it clear when to use it.
-- **Iterate on the prompt.** First version is rarely perfect. Use the agent for a week, notice what's annoying, edit the file.
-- **Share your agents.** A `.md` file is portable. Email it to a friend, paste it in a doc, fork this repo and PR it.
+Restart Claude. They're live.
 
 ---
 
 ## Where to learn more
 
 - Anthropic's [official agent docs](https://docs.claude.com/en/docs/claude-code/agents.md)
-- The [Claude Code GitHub](https://github.com/anthropics/claude-code) for examples
+- The [Claude Code GitHub](https://github.com/anthropics/claude-code) for more examples
 
 ---
 
