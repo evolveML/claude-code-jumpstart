@@ -48,7 +48,7 @@ To invoke any of them: in plain English, just say *"Hey [agent-name] — [what y
 ```bash
 claude                 # Start Claude in any folder
 /exit                  # Close Claude
-@agent-name [task]     # Invoke an agent
+Hey agent-name — task    # Invoke an agent in plain English
 /clear                 # Reset conversation (start fresh)
 /help                  # See everything you can do
 ```
